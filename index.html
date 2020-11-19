@@ -7,13 +7,75 @@
 </head>
 <body>
 
-    <nav>Hello World!</nav>
+    <div class="stars">
+    <div class="nav">Gork3n GitHub Page</div>
 
     <p>Oh man! I'm working on my GitHub page. Well as you can see things are still a work in progress. I'll update this page when things are more concrete. <strong>-Gork3n</strong></p>
 
-    <div><i>I think I'll go with a space theme design. I do love outerspace.</i></div>
-    <img src="images/html5-logo-256.png" alt="HTML 5 Badge"><img src="images/css3-logo-256.png" alt="CSS 3 Badge"><img src="images/javascript-logo-256.png" alt="Javascript Badge">
-    <footer>Is this a footer? I think so.</footer>
 
+    <!-- <img src="images/html5-logo-256.png" alt="HTML 5 Badge"><img src="images/css3-logo-256.png" alt="CSS 3 Badge"><img src="images/javascript-logo-256.png" alt="Javascript Badge"> -->
+   
+    <footer>Work In Progress</footer>
+    </div>
+
+
+
+    <script>
+        const space = document.querySelector('.stars');
+        const form = document.querySelector('form');
+        const starsMax = 500;
+
+        // Functions
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function createStar() {
+            const star = document.createElement('span');
+            star.classList.add('star');
+
+            // size
+            const size = star.style.width = random(1, 4) + 'px';
+            star.style.width = size;
+            star.style.height = size;
+
+            // positon
+            star.style.top = random(2, 98) + '%';
+            star.style.left = random(2, 98) + '%';
+
+            // glow
+            const glow = random(3, 5);
+            star.style.boxShadow = '0px 0px ' + glow + 'px ' + glow / 1.6 + 'px   rgba(255, 255, 255, 0.3)';
+
+            // animation
+            star.style.animationDuration = random(2000, 5000) + 'ms';
+
+            space.appendChild(star);
+        }
+
+        function populateSpace(nbr) {
+            for (var i = 0; i < nbr; i++) {
+                createStar();
+            }
+        }
+
+        // Events
+        populateSpace(250);
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let starsNb = Number(this.starsNb.value);
+            if (isNaN(starsNb)) return;
+            if (!(starsNb >= 0) || !(starsNb <= starsMax)) return;
+/*             if (starsNb <= 1) {
+                this.submitBtn.value = 'Star';
+            } else {
+                this.submitBtn.value = 'Stars';
+            }
+            space.innerHTML = ''; */
+            populateSpace(starsNb);
+        });
+    </script>
+
+</div>
 </body>
 </html>
