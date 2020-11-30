@@ -9,7 +9,21 @@
 
     <img class="bg" src="/images/sky-star-atmosphere-constellation-aviation-space-1262201-pxhere.com.jpg" alt="Outer space image (CC0)">
     <div class="stars">
-        
+    <!-- <img src="images/html5-logo-256.png" alt="HTML 5 Badge"><img src="images/css3-logo-256.png" alt="CSS 3 Badge"><img src="images/javascript-logo-256.png" alt="Javascript Badge"> -->
+    </div>
+    
+    <div class="filler"> 
+    Oh man! I'm working on my GitHub page. Well as you can see things are still a work in progress. I'll update this page when things are more concrete. <strong>-Gork3n</strong>
+    </div>
+    <div class="contentStage">
+        <section class="sectionOne">
+            Content here 
+        </section>
+        <footer>
+            End of Content... bruh
+        </footer>
+    </div>
+
     <nav>
         <div class="logo">Gork3n</div>
         <ul class="navList">
@@ -19,20 +33,8 @@
             <li>Concepts</li>
         </ul>
     </nav>
-
-    <p>Oh man! I'm working on my GitHub page. Well as you can see things are still a work in progress. I'll update this page when things are more concrete. <strong>-Gork3n</strong></p>
-
-
-    <!-- <img src="images/html5-logo-256.png" alt="HTML 5 Badge"><img src="images/css3-logo-256.png" alt="CSS 3 Badge"><img src="images/javascript-logo-256.png" alt="Javascript Badge"> -->
-   
-    <footer>Work In Progress</footer>
-    </div>
-
-
-
     <script>
         const space = document.querySelector('.stars');
-        const form = document.querySelector('form');
         const starsMax = 500;
 
         // Functions
@@ -76,12 +78,12 @@
             let starsNb = Number(this.starsNb.value);
             if (isNaN(starsNb)) return;
             if (!(starsNb >= 0) || !(starsNb <= starsMax)) return;
-/*             if (starsNb <= 1) {
+            if (starsNb <= 1) {
                 this.submitBtn.value = 'Star';
             } else {
                 this.submitBtn.value = 'Stars';
             }
-            space.innerHTML = ''; */
+            space.innerHTML = '';
             populateSpace(starsNb);
         });
     </script>
