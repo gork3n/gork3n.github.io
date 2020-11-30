@@ -7,8 +7,18 @@
 </head>
 <body>
 
+    <img class="bg" src="/images/sky-star-atmosphere-constellation-aviation-space-1262201-pxhere.com.jpg" alt="Outer space image (CC0)">
     <div class="stars">
-    <div class="nav">Gork3n GitHub Page</div>
+        
+    <nav>
+        <div class="logo">Gork3n</div>
+        <ul class="navList">
+            <li>About</li>
+            <li>Contact</li>
+            <li>Projects</li>
+            <li>Concepts</li>
+        </ul>
+    </nav>
 
     <p>Oh man! I'm working on my GitHub page. Well as you can see things are still a work in progress. I'll update this page when things are more concrete. <strong>-Gork3n</strong></p>
 
@@ -48,7 +58,7 @@
             star.style.boxShadow = '0px 0px ' + glow + 'px ' + glow / 1.6 + 'px   rgba(255, 255, 255, 0.3)';
 
             // animation
-            star.style.animationDuration = random(2000, 5000) + 'ms';
+            star.style.animationDuration = random(2000, 11000) + 'ms';
 
             space.appendChild(star);
         }
@@ -60,7 +70,7 @@
         }
 
         // Events
-        populateSpace(250);
+        populateSpace(500);
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             let starsNb = Number(this.starsNb.value);

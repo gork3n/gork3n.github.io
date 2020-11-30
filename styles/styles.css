@@ -5,7 +5,6 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     color: #fff;
     width: 100%;
-    height: 100%;
     text-align: center;
 }
 body {
@@ -13,65 +12,108 @@ body {
     padding: 0;
     height: 100%;
     background: #050719;
+
+}
+
+.bg {
+    position: fixed;
+    background-repeat: no-repeat;
+    image-resolution: 1080px;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    box-shadow: inset 0 0 200px black;
+    z-index: -2;
 }
 
 .stars {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #050719;
-    position: absolute;
     z-index: -1;
 }
 .star {
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.582);
     display: block;
     position: absolute;
-    -webkit-animation: glow 4000ms linear infinite;
-    animation: glow 4000ms linear infinite;
+    -webkit-animation: glow 15000ms linear infinite;
+    animation: glow 15000ms linear infinite;
 }
 
 @-webkit-keyframes glow {
     0% {
-        opacity: 0.0;
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
-    }
-    50% {
-        opacity: 0.9;
+        opacity: 0.4;
         -webkit-transform: scale(0.5);
         transform: scale(0.5);
     }
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
     100% {
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
+        opacity: 1;
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
     }
 }
 
 @keyframes glow {
     0% {
-        opacity: 0;
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
-    }
-    50% {
-        opacity: 0.9;
+        opacity: 0.4;
         -webkit-transform: scale(0.5);
         transform: scale(0.5);
     }
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.5);
+    }
     100% {
-        -webkit-transform: scale(0.2);
-        transform: scale(0.2);
+        opacity: 1;
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
     }
 }
 
-.nav {
-    margin: 0;
-    padding: 0;
+nav {
+    background-color: #441e411c;
+    display: inline-block;
+    align-items: center;
+    margin-right: 40px;
     width: 100%;
+    height: 55px;
+    z-index: 5;
+}
+
+.logo {
+    margin: 0 auto;
     text-align: center;
-    font-size: 60px;
+    padding: 5px 25px;
+    float: left;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.navList {
+    display: inline;
+    list-style: none;
+    width: 50px; 
+    height: 55px;
+    margin-right: 10px;
+}
+
+.navList li {
+    float: right;
+    width: 60px;
+    padding: 17px 20px;
+}
+
+.navList li:hover {
+    background-color: rgba(47, 47, 47, 0.39);
+    cursor: pointer;
 }
 
 p {
