@@ -1,29 +1,13 @@
 <!DOCTYPE html>
+
 <head>
 
-<title>Gork3n GitHub Page</title>
-<link rel="stylesheet" href="styles/styles.css">
- 
+    <title>Gork3n GitHub Page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
 </head>
+
 <body>
-
-    <img class="bg" src="/images/sky-star-atmosphere-constellation-aviation-space-1262201-pxhere.com.jpg" alt="Outer space image (CC0)">
-    <div class="stars">
-    <!-- <img src="images/html5-logo-256.png" alt="HTML 5 Badge"><img src="images/css3-logo-256.png" alt="CSS 3 Badge"><img src="images/javascript-logo-256.png" alt="Javascript Badge"> -->
-    </div>
-    
-    <div class="filler"> 
-    Oh man! I'm working on my GitHub page. Well as you can see things are still a work in progress. I'll update this page when things are more concrete. <strong>-Gork3n</strong>
-    </div>
-    <div class="contentStage">
-        <section class="sectionOne">
-            Content here 
-        </section>
-        <footer>
-            End of Content... bruh
-        </footer>
-    </div>
-
     <nav>
         <div class="logo">Gork3n</div>
         <ul class="navList">
@@ -32,62 +16,20 @@
             <li>Projects</li>
             <li>Concepts</li>
         </ul>
+        <span class="hamburger-menu"></span>
     </nav>
-    <script>
-        const space = document.querySelector('.stars');
-        const starsMax = 500;
+    <div class="stars">
+        <div class="main">
+            <h1>I'm still learning</h1>
+            <h2>So enjoy my Stars.</h2>
+            <p>I'm working on mastering HTML and CSS; and I'm still learning JavaScript.</p>
+            <p>Then on the a framework. Wish me luck</p>
+        </div>
+    </div>
 
-        // Functions
-        function random(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
+    </div>
 
-        function createStar() {
-            const star = document.createElement('span');
-            star.classList.add('star');
-
-            // size
-            const size = star.style.width = random(1, 4) + 'px';
-            star.style.width = size;
-            star.style.height = size;
-
-            // positon
-            star.style.top = random(2, 98) + '%';
-            star.style.left = random(2, 98) + '%';
-
-            // glow
-            const glow = random(3, 5);
-            star.style.boxShadow = '0px 0px ' + glow + 'px ' + glow / 1.6 + 'px   rgba(255, 255, 255, 0.3)';
-
-            // animation
-            star.style.animationDuration = random(2000, 11000) + 'ms';
-
-            space.appendChild(star);
-        }
-
-        function populateSpace(nbr) {
-            for (var i = 0; i < nbr; i++) {
-                createStar();
-            }
-        }
-
-        // Events
-        populateSpace(500);
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            let starsNb = Number(this.starsNb.value);
-            if (isNaN(starsNb)) return;
-            if (!(starsNb >= 0) || !(starsNb <= starsMax)) return;
-            if (starsNb <= 1) {
-                this.submitBtn.value = 'Star';
-            } else {
-                this.submitBtn.value = 'Stars';
-            }
-            space.innerHTML = '';
-            populateSpace(starsNb);
-        });
-    </script>
-
-</div>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
