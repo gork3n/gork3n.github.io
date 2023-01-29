@@ -47,7 +47,6 @@
             </p>
     </td>
 </tr>
-<!-- STATS -->
 <tr>
 <td>
 <p align="center">
