@@ -1,5 +1,3 @@
-<!-- SVG TYPING -->
-
 <table>
     <tr>
         <th><h4 align="center">Mad Skills and Tools</h4></th>
